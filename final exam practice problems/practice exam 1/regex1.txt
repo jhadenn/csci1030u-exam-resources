@@ -1,0 +1,20 @@
+Write a regular expression to recognize any string belonging to the following language:
+
+Between 3 and 5 As (inclusive), followed by an optional B, then zero or more Cs, then either a single D or one or more Es
+
+Below are some examples of strings that would be a part of this language:
+
+AAABCCCD
+AAAAEEEE
+AAAAABD
+AAACCCE
+
+^(A{3,5})(B?)(C*)(D|E+)$
+Explanation:
+
+^: Asserts the start of the string.
+(A{3,5}): Matches between 3 and 5 consecutive 'A' characters.
+(B?): Matches an optional 'B'.
+(C*): Matches zero or more consecutive 'C' characters.
+(D|E+): Matches either a single 'D' or one or more consecutive 'E' characters.
+$: Asserts the end of the string.

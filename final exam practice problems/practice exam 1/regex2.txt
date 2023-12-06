@@ -1,0 +1,18 @@
+Write a regular expression to recognize a basic street address, briefly described as follows
+
+One or more digits (0-9) followed by one or more words, each of which is one or more upper or lowercase letters, separated by spaces.
+
+Below are some examples of strings that would be a part of this language:
+
+2000 Simcoe Road North
+290 Bremner Blvd
+123 Apple
+
+^\d+\s[A-Za-z]+(?:\s[A-Za-z+])*$
+
+^: Asserts the start of the string.
+\d+: Matches one or more digits (0-9).
+\s: Matches a single whitespace character.
+[A-Za-z]+: Matches one or more upper or lowercase letters.
+(?:\s[A-Za-z]+)*: Non-capturing group that allows for zero or more additional words separated by spaces.
+$: Asserts the end of the string.
